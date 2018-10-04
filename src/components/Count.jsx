@@ -1,14 +1,21 @@
 import React from 'react'
-import {observer} from 'mobx-react'
+import { inject, observer } from 'mobx-react'
 
+@inject('store') // 注入store
 @observer
 class Count extends React.Component {
+  constructor(props) {
+    super(props)
+    this.store = props.store.count
+  }
   render() {
     return (
       <div>
-        <p>{this.props.store.num}</p>
-        <button onClick={this.props.store.addNum}>+1</button>
-        <button onClick={this.props.store.reduceNum} disabled={this.props.store.num < 1}>-1</button>
+        <p>{this.store.num}</p>
+        <button onClick={this.store.addNum}>+1</button>
+        <button onClick={this.store.reduceNum} disabled={this.store.num < 1}>
+          -1
+        </button>
       </div>
     )
   }

@@ -1,11 +1,15 @@
-import {observable, action} from 'mobx'
+import { observable, action } from 'mobx'
 
-export default class CountState {
+class CountModel {
   @observable num = 0
-  @action addNum = () => {
+  @action
+  addNum = () => {
     this.num++
   }
-  @action reduceNum = () => {
+  @action
+  reduceNum = () => {
     this.num--
   }
 }
+
+export default new CountModel()
