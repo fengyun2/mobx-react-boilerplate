@@ -52,8 +52,8 @@
     "mobx-react": "^5.2.3",
     "mobx-react-devtools": "^6.0.1",
     "prop-types": "^15.6.2",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0",
     "react-router-dom": "^4.3.1"
   }
 }
